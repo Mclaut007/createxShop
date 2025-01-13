@@ -1,0 +1,244 @@
+.footer {
+  background: var(--black);
+  // .footer__top
+
+  &__top {
+    padding-top: rem(60);
+    padding-bottom: rem(40);
+    border-bottom: rem(1) solid rgba(255, 255, 255, 0.15);
+  }
+
+  // .footer__top-container
+
+  &__top-container {
+    // display: grid;
+    // grid-template-columns: repeat(4, auto);
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(35);
+    row-gap: rem(40);
+    flex-wrap: wrap;
+    @media (max-width: $desk) {
+      column-gap: 0;
+    }
+    @media (max-width: $mobile) {
+      column-gap: rem(35);
+    }
+  }
+
+  // .footer__menu
+
+  &__menu {
+    max-width: rem(180);
+    @media (max-width: $desk) {
+      padding-right: rem(35);
+    }
+    @media (max-width: $mobile) {
+      padding-right: 0;
+    }
+  }
+
+  &__menu,
+  &__contacts {
+    @media (max-width: $desk) {
+      width: 33.3%;
+      flex-grow: 1;
+      max-width: none;
+    }
+    // @media (max-width: $mobile) {
+    //   width: 50%;
+    // }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  // .footer__menu-title
+
+  &__menu-title,
+  &__contacts-title,
+  &__apps-title {
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: rem(1);
+    text-transform: uppercase;
+    margin-bottom: rem(12);
+  }
+
+  // .footer__menu-list
+
+  &__menu-list {
+  }
+
+  // .footer__menu-item
+
+  &__menu-item,
+  &__contacts-item {
+    &:not(:last-child) {
+      margin-bottom: rem(4);
+    }
+  }
+
+  // .footer__menu-link
+
+  &__menu-link,
+  &__contacts-link {
+    color: rgba(255, 255, 255, 0.6);
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+    max-width: rem(320);
+    @media (max-width: $desk) {
+      max-width: none;
+    }
+    @media (max-width: $mobileMiddle) {
+      width: 100%;
+    }
+  }
+
+  // .footer__contacts-title
+
+  &__contacts-title {
+  }
+
+  // .footer__contacts-list
+
+  &__contacts-list {
+  }
+
+  // .footer__contacts-item
+
+  &__contacts-item {
+    color: var(--white);
+    display: flex;
+    gap: rem(4);
+    &:has(.footer__social-media):not(:first-child) {
+      margin-top: rem(24);
+    }
+  }
+
+  // .footer__contacts-link
+
+  &__contacts-link {
+  }
+
+  // .footer__social-media
+
+  &__social-media {
+  }
+
+  // .footer__apps
+
+  &__apps {
+    @media (max-width: $desk) {
+      width: 100%;
+    }
+    @media (max-width: $mobile) {
+      width: 33%;
+      flex-grow: 1;
+    }
+    @media (max-width: $mobileMiddle) {
+      width: 100%;
+    }
+  }
+
+  // .footer__apps-title
+
+  &__apps-title {
+    margin-bottom: rem(24);
+  }
+
+  // .footer__apps-links
+
+  &__apps-links {
+    gap: rem(20);
+    // @media (max-width: $mobileMiddle) {
+    //   flex-wrap: wrap;
+    // }
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+  }
+
+  // .footer__bottom-container
+
+  &__bottom-container {
+    padding-top: rem(20);
+    padding-bottom: rem(28);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column-reverse;
+      gap: rem(10);
+    }
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+    display: flex;
+    gap: rem(4);
+    color: var(--white);
+    font-size: rem(12);
+    line-height: 1.5;
+    align-items: center;
+  }
+
+  // .footer__heart-icon
+
+  &__heart-icon {
+    width: rem(16);
+    height: rem(16);
+  }
+
+  // .footer__button-to-top
+
+  &__button-to-top {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.social-media {
+  // .social-media__link
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(12);
+  &__link {
+    width: rem(32);
+    height: rem(32);
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(4);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .social-media__img
+
+  &__img {
+  }
+}

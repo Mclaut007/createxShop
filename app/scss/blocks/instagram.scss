@@ -1,0 +1,110 @@
+.instagram {
+  // .instagram__container
+
+  &__container {
+    // padding-bottom: rem(180);
+    padding-bottom: proadrem(80, 180, $minWidthRemWithout, $maxWidthRemWithout);
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, rem(260)) minmax(auto, rem(260)) minmax(auto, rem(260));
+    gap: rem(15);
+    // align-items: start;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+      // row-gap: rem(40);
+      row-gap: proadrem(15, 40, $minWidthRemWithout, $mobileRemWithout);
+      // column-gap: 0;
+    }
+    @media (max-width: $mobileMiddle) {
+      column-gap: 0;
+    }
+  }
+
+  // .instagram__content
+
+  &__content {
+    color: var(--black);
+    @media (max-width: $mobile) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+    @media (max-width: $mobile) and (min-width: $mobileMiddle) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  // .instagram__texts
+
+  &__texts {
+    margin-bottom: proadrem(10, 60, $minWidthRemWithout, $maxWidthRemWithout);
+    @media (max-width: $mobile) and (min-width: $mobileMiddle) {
+      margin-bottom: 0;
+    }
+  }
+
+  // .instagram__text
+
+  &__text {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: rem(1);
+    text-transform: uppercase;
+    // margin-bottom: rem(8);
+    margin-bottom: proadrem(0, 8, $minWidthRemWithout, $maxWidthRemWithout);
+    font-size: proadrem(12, 16, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .instagram__address
+
+  &__address {
+    // font-size: rem(46);
+    font-size: proadrem(25, 46, $minWidthRemWithout, $maxWidthRemWithout);
+    font-weight: 900;
+    line-height: 1.3;
+    // &:not(:last-child) {
+    //   margin-bottom: proadrem(10, 60, $minWidthRemWithout, $maxWidthRemWithout);
+    // }
+  }
+
+  // .instagram__button
+
+  &__button {
+    gap: rem(8);
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+
+  // instagram__button-icon
+
+  &__button-icon {
+    width: rem(24);
+    height: rem(24);
+    path {
+      transition: fill 0.3s ease;
+    }
+  }
+
+  // .instagram__img-wrapper
+
+  &__img-wrapper {
+    position: relative;
+    padding-top: 100%;
+  }
+
+  // .instagram__img
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}

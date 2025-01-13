@@ -1,0 +1,189 @@
+.fashion-blog {
+  // .fashion-blog__container
+
+  &__container {
+    // padding-bottom: rem(95);
+    // padding-bottom: proadrem(50, 95, $minWidthRemWithout, $maxWidthRemWithout);
+    padding-bottom: proadrem(50, 120, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .fashion-blog__header
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // margin-bottom: rem(60);
+    margin-bottom: proadrem(20, 60, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .fashion-blog__heading
+
+  &__heading {
+    @media(max-width: $mobileSmall) {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+  // .fashion-blog__button
+
+  &__button {
+    @media (max-width: $mobileSmall) {
+      margin: rem(30) auto 0 auto;
+    }
+  }
+
+  // .fashion-blog__articles
+
+  &__articles {
+    // display: flex;
+    // justify-content: space-between;
+    // gap: rem(30);
+    display: grid;
+    // gap: rem(30);
+    gap: proadrem(15, 30, $minWidthRemWithout, $maxWidthRemWithout);
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .fashion-blog__article
+
+  &__article {
+    // flex-grow: 1;
+  }
+}
+
+.blog-article {
+  border-radius: rem(4);
+  background: var(--white);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  box-shadow:
+    0 rem(4) rem(4) rem(-4) rgba(30, 33, 44, 0.03),
+    0 rem(12) rem(10) rem(6) rgba(154, 156, 165, 0.04),
+    0 rem(30) rem(24) rem(-10) rgba(154, 156, 165, 0.05),
+    0 rem(80) rem(80) rem(-20) rgba(154, 156, 165, 0.08);
+  @media (any-hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow:
+        0 rem(4) rem(4) rem(-4) rgba(30, 33, 44, 0.05),
+        0 rem(12) rem(10) rem(-6) rgba(154, 156, 165, 0.08),
+        0 rem(30) rem(24) rem(-10) rgba(154, 156, 165, 0.1),
+        0 rem(80) rem(80) rem(-20) rgba(154, 156, 165, 0.16);
+    }
+  }
+
+  // .blog-article__wrapper-img
+
+  &__wrapper-img {
+    position: relative;
+    padding-top: 51%;
+  }
+
+  // .blog-article__img
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  // .blog-article__content
+
+  &__content {
+    padding: rem(24) rem(24) rem(21);
+    padding: proadrem(15, 24, $minWidthRemWithout, $maxWidthRemWithout)
+      proadrem(10, 24, $minWidthRemWithout, $maxWidthRemWithout)
+      proadrem(15, 21, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .blog-article__heading
+
+  &__heading {
+    color: var(--black);
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: rem(12);
+    @media (min-width: $mobileMiddle) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // .blog-article__heading-link
+
+  &__heading-link {
+    transition: color 0.3s ease;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #17696a;
+      }
+    }
+  }
+
+  // .blog-article__extra-info
+
+  &__extra-info {
+    display: flex;
+    align-items: center;
+    // gap: rem(12);
+    gap: proadrem(8, 12, $minWidthRemWithout, $maxWidthRemWithout);
+    color: var(--gray-7);
+    // font-size: rem(14);
+    font-size: proadrem(12, 14, $minWidthRemWithout, $maxWidthRemWithout);
+    line-height: 1.5;
+    margin-bottom: rem(16);
+  }
+
+  // .blog-article__theme
+
+  &__theme,
+  &__comments-amount {
+    transition: all 0.3s ease;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // .blog-article__date
+
+  &__date {
+  }
+
+  // .blog-article__comments
+
+  &__comments {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+  }
+
+  // .blog-article__comments-img
+
+  &__comments-img {
+    width: rem(16);
+  }
+
+  // .blog-article__comments-amount
+
+  &__comments-amount {
+  }
+
+  // .blog-article__paragraph
+
+  &__paragraph {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // количество строк
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

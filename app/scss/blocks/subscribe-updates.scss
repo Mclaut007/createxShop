@@ -1,0 +1,209 @@
+.subscribe-updates {
+  background: #f4f5f6;
+  // .subscribe-updates__container
+
+  &__container {
+    padding: proadrem(40, 65, $minWidthRemWithout, $maxWidthRemWithout) rem(15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(50);
+    @media (max-width: $tablet) {
+      align-items: flex-start;
+    }
+  }
+
+  // .subscribe-updates__content
+
+  &__content {
+    width: rem(495);
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      width: rem(600);
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // .subscribe-updates__heading
+
+  &__heading {
+    margin-bottom: rem(24);
+    text-align: left;
+  }
+
+  // .subscribe-updates__text
+
+  &__text {
+    color: var(--gray-7);
+    // font-size: rem(20);
+    font-size: proadrem(18, 20, $minWidthRemWithout, $maxWidthRemWithout);
+    line-height: 1.5;
+    margin-bottom: rem(32);
+  }
+
+  // .subscribe-updates__form
+
+  &__form {
+  }
+
+  // .subscribe-updates__categories
+
+  &__categories {
+    display: flex;
+    gap: rem(12);
+    margin-bottom: rem(32);
+    // margin-bottom: proadrem(15, 32, $minWidthRemWithout, $maxWidthRemWithout);
+    @media (max-width: $mobileSmall) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: rem(370)) {
+      gap: rem(10);
+      // justify-content: space-between;
+    }
+  }
+
+  // .subscribe-updates__category
+
+  &__category {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked + .subscribe-updates__category-label {
+      color: var(--white);
+      border: 1px solid var(--green);
+      background: var(--green);
+    }
+  }
+
+  // .subscribe-updates__category-label
+
+  &__category-label {
+    color: var(--gray-7);
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: 1.5;
+    border-radius: rem(4);
+    border: 1px solid #d7dadd;
+    padding: rem(5.5) rem(16);
+    user-select: none;
+    // transition: all 0.3s ease;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      padding: rem(5) rem(14);
+    }
+  }
+
+  // .subscribe-updates__input-email-block
+
+  &__input-email-block {
+  }
+
+  // .subscribe-updates__input-label
+
+  &__input-label {
+    margin-bottom: rem(8);
+  }
+
+  // .subscribe-updates__input-submit-block
+
+  &__input-submit-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: rem(24);
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      row-gap: rem(15);
+    }
+  }
+
+  // .subscribe-updates__input
+
+  &__input {
+    border-radius: rem(4) 0 0 rem(4);
+    border: 1px solid #d7dadd;
+    border-right: none;
+    background: var(--white);
+    padding: rem(10) rem(10) rem(10) rem(16);
+    // color: var(--gray-600, #9a9ca5);
+    font-size: rem(16);
+    line-height: 1.6;
+    flex-grow: 1;
+    &::placeholder {
+      color: var(--gray-9);
+    }
+    @media (max-width: $mobileSmall) {
+      border-radius: rem(4);
+      border: 1px solid #d7dadd;
+    }
+  }
+
+  // .subscribe-updates__input-submit
+
+  &__input-submit {
+    border-radius: 0 rem(4) rem(4) 0;
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      border-radius: rem(4);
+    }
+  }
+
+  // .subscribe-updates__agree-block
+
+  &__agree-block {
+  }
+
+  // .subscribe-updates__agree-input
+
+  &__agree-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked + .subscribe-updates__agree-label::before {
+      background:
+        url(../images/subscribe-update/check.svg) no-repeat center,
+        var(--green);
+    }
+  }
+
+  // .subscribe-updates__agree-label
+
+  &__agree-label {
+    display: flex;
+    gap: rem(12);
+    // align-items: center;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: rem(16);
+      height: rem(16);
+      border: 1px solid var(--green);
+      border-radius: rem(3);
+      flex-shrink: 0;
+      margin-top: rem(5);
+    }
+  }
+
+  // .subscribe-updates__img-wrapper
+
+  &__img-wrapper {
+    width: rem(461);
+    @media (max-width: $tablet) {
+      margin-right: -15%;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .subscribe-updates__img
+
+  &__img {
+    width: 100%;
+  }
+}

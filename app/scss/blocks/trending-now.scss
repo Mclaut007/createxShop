@@ -1,0 +1,120 @@
+.trending-now,
+.sale-up-section {
+  background: #e5e8ed;
+  // .trending-now__container
+
+  &__container {
+    // padding-top: rem(80);
+    // padding-bottom: rem(80);
+    padding: proadrem(40, 80, $minWidthRemWithout, $maxWidthRemWithout) rem(15);
+    position: relative;
+  }
+
+  // .trending-now__heading
+
+  &__heading {
+    text-align: left;
+    // margin-bottom: rem(60);
+    margin-bottom: proadrem(30, 60, $minWidthRemWithout, $maxWidthRemWithout);
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
+  }
+
+  // .trending-now__slider
+
+  &__slider {
+    // &:not(:last-child) {
+    // margin-bottom: rem(80);
+    // margin-bottom: proadrem(30, 80, $minWidthRemWithout, $maxWidthRemWithout);
+    // }
+    padding: rem(10) rem(25) proadrem(60, 120, $minWidthRemWithout, $maxWidthRemWithout);
+    margin: rem(-10) rem(-25) rem(-30);
+  }
+
+  // .trending-now__swiper-wrapper
+
+  &__swiper-wrapper {
+  }
+
+  // .trending-now__swiper-slide
+
+  &__swiper-slide {
+  }
+
+  // .trending-now__button
+
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.trending-now-slider,
+.sale-up-section-slider {
+  // .trending-now-slider__next
+
+  &__next {
+    right: rem(3);
+  }
+
+  // .trending-now-slider__prev
+
+  &__prev {
+    left: auto;
+    right: rem(65);
+    // right: proadrem(50, 65, $mobileMiddleRemWithout, $maxWidthRemWithout);
+  }
+
+  &__next,
+  &__prev {
+    // width: rem(48);
+    width: proadrem(35, 48, $minWidthRemWithout, $maxWidthRemWithout);
+    // height: rem(48);
+    height: proadrem(35, 48, $minWidthRemWithout, $maxWidthRemWithout);
+    background: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    // left: proadrem(15, 32, $minWidthRemWithout, $maxWidthRemWithout);
+    // top: rem(104);
+    top: proadrem(75, 104, $minWidthRemWithout, $maxWidthRemWithout);
+    // z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // opacity: 0.5;
+    // transition: opacity 0.3s ease 0s;
+    // @media (max-width: $deskMiddle) {
+    //   bottom: rem(70);
+    //   top: auto;
+    //   left: auto;
+    //   right: rem(75);
+    // }
+
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
+
+    // @media (any-hover: hover) and (pointer: fine) {
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
+    &::after {
+      display: none;
+    }
+    svg {
+      width: rem(18);
+      height: rem(12);
+    }
+    &.swiper-button-disabled {
+      opacity: 1;
+      background: none;
+      path {
+        fill: var(--gray-4);
+      }
+    }
+  }
+}

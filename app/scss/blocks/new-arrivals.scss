@@ -1,0 +1,100 @@
+.new-arrivals {
+  // .new-arrivals__container_large
+
+  &__container_large {
+    // padding-top: rem(180);
+    padding-top: proadrem(60, 180, $minWidthRemWithout, $maxWidthRemWithout);
+    // padding-bottom: rem(180);
+    padding-bottom: proadrem(60, 180, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .new-arrivals__heading
+
+  &__heading {
+    // margin-bottom: rem(24);
+    margin-bottom: proadrem(10, 24, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .new-arrivals__text, .new-arrivals__link
+  &__text,
+  &__link {
+    text-align: center;
+    // font-size: rem(18);
+    font-size: proadrem(15, 18, $minWidthRemWithout, $maxWidthRemWithout);
+    line-height: 1.5;
+  }
+
+  // .new-arrivals__text
+
+  &__text {
+    color: var(--gray-7);
+  }
+
+  // .new-arrivals__link
+
+  &__link {
+    color: var(--green);
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration-line: underline;
+    transition: opacity 0.3s ease;
+    &:not(:last-child) {
+      // margin-bottom: rem(60);
+      margin-bottom: proadrem(30, 60, $minWidthRemWithout, $maxWidthRemWithout);
+    }
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // .new-arrivals__slider
+
+  &__slider {
+    // padding-bottom: rem(80);А
+    padding-bottom: proadrem(30, 80, $minWidthRemWithout, $maxWidthRemWithout);
+    @media (max-width: rem(1920)) {
+      overflow: visible;
+    }
+  }
+
+  // .new-arrivals__swiper-wrapper
+
+  &__swiper-wrapper {
+  }
+
+  // .new-arrivals__slide
+
+  &__slide {
+    // width: rem(285);
+    width: proadrem(180, 285, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .new-arrivals__pagination
+
+  &__pagination {
+    display: flex;
+    // gap: rem(12);
+    gap: proadrem(8, 12, $minWidthRemWithout, $maxWidthRemWithout);
+    justify-content: center;
+    .swiper-pagination-bullet {
+      width: rem(30);
+      height: rem(3);
+      background: #b3b7bc;
+      border-radius: rem(2);
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--gray-4);
+    }
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+

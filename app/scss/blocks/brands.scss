@@ -1,0 +1,35 @@
+.brands {
+  // .brands__container
+
+  &__container {
+    // padding-bottom: rem(120);
+    padding-bottom: proadrem(50, 120, $minWidthRemWithout, $maxWidthRemWithout);
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: rem(20);
+    // row-gap: rem(10);
+    row-gap: proadrem(0, 10, $minWidthRemWithout, $maxWidthRemWithout);
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(5, auto);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(4, auto);
+    }
+    @media (max-width: $mobileMiddle) {
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-around;
+    }
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  // .brands__brand
+
+  &__brand {
+    max-width: rem(120);
+    min-width: rem(60);
+  }
+}

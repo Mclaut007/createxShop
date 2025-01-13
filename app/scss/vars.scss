@@ -1,0 +1,72 @@
+// ========== css-переменные ========== //
+
+// Возможно, лучше использовать css-переменные, а не scss. Тогда, к примеру, в будущем можно очень легко на всем сайте поменять цвет, который применяется во множестве мест. Пример использования:
+
+:root {
+  --black: #1e212c;
+  --white: #fff;
+  --green: #17696a;
+  --red: #ff4242;
+  --gray-4: #424551;
+  --gray-7: #787a80;
+  --gray-9: #9a9ca5;
+}
+
+// .block {
+// color: var(--main-color);
+// }
+
+// ========== scss-переменные ========== //
+
+// $mainColor - поменять на самый частый цвет в макете
+$mainColor: #000;
+
+// $maxWidth - размер max-width для __container. Поменять на тот, что по макету
+
+// $maxWidth: 1280px;
+
+$maxWidthPx: 1260; // Это ширина в пикселях, но пишем без пикселей, чтобы пересчитать в ремы
+$minWidthPx: 320;
+
+// Если хотим maxWidth и minWidth в ремах, то пишем следующее:
+$maxWidth: calc($maxWidthPx / 16 * 1rem);
+$minWidth: calc($minWidthPx / 16 * 1rem);
+
+// maxWidth и minWidth в ремах, но без единиц измерения (используется в формуле для адаптивных свойств:
+
+$maxWidthRemWithout: calc($maxWidthPx / 16);
+$minWidthRemWithout: calc($minWidthPx / 16);
+// То есть будет, к примеру, не 2.25rem, а 2.25
+
+//--------------------------//
+
+// ============ Брейкпонты в пикселях ========== //
+
+// $deskMiddle: 1399.98px;
+// $desk: 1199.98px;
+// $tablet: 991.98px;
+// $mobile: 767.98px;
+// $mobileMiddle: 575.98px;
+// $mobileSmall: 478.98px;
+
+// ============ Брейкпонты в ремах ========== //
+
+$deskMiddle: calc(1399.98 / 16 * 1rem);
+$desk: calc(1199.98 / 16 * 1rem);
+$tablet: calc(991.98 / 16 * 1rem);
+$mobile: calc(767.98 / 16 * 1rem);
+$mobileMiddle: calc(575.98 / 16 * 1rem);
+$mobileSmall: calc(478.98 / 16 * 1rem);
+
+// Брейкпойнты в ремах без ремов (без единиц измерения) //
+
+$deskMiddleRemWithout: calc(1399.98 / 16);
+$deskRemWithout: calc(1199.98 / 16);
+$tabletRemWithout: calc(991.98 / 16);
+$mobileRemWithout: calc(767.98 / 16);
+$mobileMiddleRemWithout: calc(575.98 / 16);
+$mobileSmallRemWithout: calc(478.98 / 16);
+
+
+
+

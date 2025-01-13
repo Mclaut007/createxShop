@@ -1,0 +1,129 @@
+.apps {
+  background: var(--black);
+  // .apps__container
+
+  &__container {
+    padding: proadrem(40, 60, $minWidthRemWithout, $maxWidthRemWithout) rem(15);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    @media (max-width: $mobile) {
+      justify-content: flex-start;
+    }
+  }
+
+  // .apps__content
+
+  &__content {
+    max-width: rem(600);
+    position: relative;
+    z-index: 1;
+    @media (max-width: $tablet) {
+      max-width: rem(470);
+    }
+    @media (max-width: $mobile) {
+      max-width: rem(400);
+    }
+    @media (max-width: $mobileMiddle) {
+      max-width: 100%;
+    }
+  }
+
+  // .apps__text
+
+  &__text {
+    color: var(--white);
+    // font-size: rem(32);
+    font-size: proadrem(25, 32, $minWidthRemWithout, $tabletRemWithout);
+    font-weight: 900;
+    line-height: 1.3;
+    &:not(:last-child) {
+      // margin-bottom: rem(48);
+      margin-bottom: proadrem(35, 48, $minWidthRemWithout, $maxWidthRemWithout);
+    }
+  }
+
+  // .apps__links
+
+  &__links {
+    // display: flex;
+    // gap: rem(24);
+    // @media (max-width: $mobileMiddle) {
+    //   // justify-content: center;
+    //   gap: rem(15);
+    // }
+  }
+
+  // .apps__app-link
+
+  &__app-link {
+    // transition:
+    //   transform 0.3s ease,
+    //   opacity 0.3s ease;
+    // border-radius: rem(5);
+    // overflow: hidden;
+    // @media (any-hover: hover) and (pointer: fine) {
+    //   &:hover {
+    //     transform: scale(1.01);
+    //     opacity: 0.7;
+    //   }
+    // }
+  }
+
+  // .apps__app-img
+
+  &__app-img {
+    // width: rem(162);
+  }
+
+  // .apps__img-main
+
+  &__img-main {
+    position: absolute;
+    bottom: 0;
+    left: rem(-28);
+    width: 38.888888%;
+    height: auto;
+    @media (max-width: $mobile) {
+      left: auto;
+      right: rem(-35);
+      width: 45%;
+    }
+    @media (max-width: $mobileMiddle) {
+      display: none;
+    }
+  }
+}
+
+// .apps-links
+
+.apps-links {
+  display: flex;
+  gap: rem(24);
+  @media (max-width: $mobileMiddle) {
+    // justify-content: center;
+    gap: rem(15);
+  }
+
+  // .apps-links__app-link
+
+  &__app-link {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    border-radius: rem(5);
+    overflow: hidden;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.01);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .apps-links__app-img
+
+  &__app-img {
+    width: rem(162);
+  }
+}
